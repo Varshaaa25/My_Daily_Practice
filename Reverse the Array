@@ -19,6 +19,11 @@ int main()
     int size,a[100];
     cout<<"enter the number of elements:";
     cin>>size;
+    if(size<=0)
+    {
+        cout<<"invalid";
+        exit(1);
+    }
     cout<<"enter the array elements to be reversed";
     for(int i=0;i<size;i++)
     {
