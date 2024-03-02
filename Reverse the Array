@@ -1,0 +1,30 @@
+#include<iostream>
+using namespace std;
+
+void  revArray(int a[],int size)
+{
+    int b[size];
+    for(int i=0;i<size;i++)
+    {
+        b[i]=a[size-i-1];   
+    }
+    cout<<"reversed elements are:";
+    for(int j=0;j<size;j++)
+    {
+       cout<<b[j]<<" ";    
+    }   
+}
+int main()
+{
+    int size,a[100];
+    cout<<"enter the number of elements:";
+    cin>>size;
+    cout<<"enter the array elements to be reversed";
+    for(int i=0;i<size;i++)
+    {
+        cin>>a[i];
+    }
+    revArray(a,size);
+    
+   return 0;    
+}
