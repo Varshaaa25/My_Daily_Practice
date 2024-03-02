@@ -1,0 +1,43 @@
+#include <iostream>
+using namespace std;
+
+int max(int a[],int size)
+{
+    int maxElement=a[0];
+    for(int i=1;i<size;i++)
+    {
+        if(a[i]>maxElement)
+        {
+            maxElement=a[i];
+        }
+    }
+    return maxElement;
+}
+int min(int a[],int size)
+{
+    int minElement=a[0];
+    for(int i=1;i<size;i++)
+    {
+        if(a[i]<minElement)
+        {
+            minElement=a[i];
+        }
+    }
+    return minElement;
+}
+
+int main()
+{
+    int size,a[100],maxElement,minElement;
+    cout<<"enter the number of elements:";
+    cin>>size;
+    cout<<"enter the elements:";
+    for(int i=0;i<size;i++)
+    {
+        cin>>a[i];
+    }
+    maxElement=max(a,size);
+    cout<<"maximum array element is:"<<maxElement<<"\n";
+    minElement=min(a,size);
+    cout<<"minimum array element is:"<<minElement;    
+}
